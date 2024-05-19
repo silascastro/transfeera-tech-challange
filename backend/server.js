@@ -11,9 +11,9 @@ const port = process.env.PORT || 3000;
 
 // routes
 
-app.use("/", (req, res, next) => {
-  res.send({message: "HEllo World!"});
-});
+const recebedores = require('./routes/recebedores')
+
+app.use("/", recebedores);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
