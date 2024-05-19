@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     cpf: DataTypes.STRING,
     email: DataTypes.STRING,
     chave_pix: DataTypes.STRING,
-    chave_tipo: DataTypes.ENUM(["email", "telefone", "cpf", "aleatória"])
+    chave_tipo: DataTypes.ENUM(["email", "telefone", "cpf", "aleatorio"])
   }, {
     sequelize,
     modelName: 'Recebedor',

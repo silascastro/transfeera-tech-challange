@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Recebedors', {
+    await queryInterface.createTable('recebedores', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -23,7 +23,7 @@ module.exports = {
       },
       chave_tipo : {
         type: Sequelize.ENUM,
-        values: ["email", "telefone", "cpf", "aleatória"]
+        values: ["email", "telefone", "cpf", "aleatorio"]
       },
       createdAt: {
         allowNull: false,
@@ -36,6 +36,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Recebedors');
+    await queryInterface.dropTable('recebedores');
   }
 };

@@ -1,26 +1,26 @@
 {
   "development": {
     "username": "root",
-    "password": "qwert123",
-    "database": "database_development",
+    "password": "qwert9876",
+    "database": "transfeera",
     "host": "127.0.0.1",
-    "port": "3306",
+    "port": "3307",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "qwert123",
-    "database": "database_test",
+    "password": "qwert9876",
+    "database": "transfeera",
     "host": "127.0.0.1",
-    "port": "3306",
+    "port": "3307",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password":"qwert123",
-    "database": "database_production",
+    "password":"qwert9876",
+    "database": "transfeera",
     "host": "127.0.0.1",
-    "port": "3306",
+    "port": "3307",
     "dialect": "mysql"
   }
 }

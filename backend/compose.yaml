@@ -9,13 +9,14 @@ services:
       - 3000:3000
 
   db:
-    image: mysql:latest
+    image: mysql
     restart: always
     container_name: database-transfeera
     volumes:
       - db-data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=qwert9876
+      - MYSQL_DATABASE=pinkFlamingosDatabase
     ports:
       - 3307:3306
    
