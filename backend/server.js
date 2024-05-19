@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const database = require('./config/database');
+database.sync({ force: false });
 
 
 const app = express();

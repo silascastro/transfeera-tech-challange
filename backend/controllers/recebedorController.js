@@ -1,3 +1,11 @@
+const recebedorService = require("../services/recebedorService")
+
 exports.getRecebedores = async(req, res, next) => {
-    res.status(404).send({ message: 'Sorry, we cannot find that!'})
+
+    try {
+        const response = recebedorService.getRecebedores();
+        res.status(200).send(response)
+    } catch (error) {
+        res.status(500).send({ message: 'Sorry, we have a internal errror!'})
+    }
 }

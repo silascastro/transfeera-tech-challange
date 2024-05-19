@@ -1,27 +1,30 @@
 'use strict';
 const {
-  Model
+  Model, Sequelize, DataTypes
 } = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Recebedor extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+const sequelize = require('../config/database.js');
+
+const Recebedor = sequelize.define(
+  'recebedor',
+  {
+    nome: {
+      type: DataTypes.STRING,
+      
+    },
+    cpf:{
+      type:  DataTypes.STRING
+    },
+    email: {
+      type:  DataTypes.STRING
+    },
+    chave_pix: {
+      type:  DataTypes.STRING
+    },
+    chave_tipo: {
+      type: DataTypes.ENUM(["email", "telefone", "cpf", "aleatorio"]),
     }
   }
-  Recebedor.init({
-    nome: DataTypes.STRING,
-    cpf: DataTypes.STRING,
-    email: DataTypes.STRING,
-    chave_pix: DataTypes.STRING,
-    chave_tipo: DataTypes.ENUM(["email", "telefone", "cpf", "aleatorio"])
-  }, {
-    sequelize,
-    modelName: 'Recebedor',
-  });
-  return Recebedor;
-};
+);
+
+
+module.exports = Recebedor;
