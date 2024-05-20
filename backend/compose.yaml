@@ -1,15 +1,15 @@
 services:
-  server:
-    build:
-      context: .
-    container_name: back-transfeera
-    environment:
-      NODE_ENV: development
-    depends_on:
-      db: 
-        condition: service_started
-    ports:
-      - 3000:3000
+  # server:
+  #   build:
+  #     context: .
+  #   container_name: back-transfeera
+  #   environment:
+  #     NODE_ENV: development
+  #   depends_on:
+  #     db: 
+  #       condition: service_started
+  #   ports:
+  #     - 3000:3000
 
   db:
     image: mysql

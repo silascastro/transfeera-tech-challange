@@ -24,7 +24,10 @@ const Recebedor = sequelize.define(
       type: DataTypes.ENUM,
       values: ["email", "telefone", "cpf", "aleatorio"],
     }
-  }
+  },
+  {
+    freezeTableName: true,
+  },
 );
 
 
