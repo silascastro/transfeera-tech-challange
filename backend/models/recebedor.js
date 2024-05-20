@@ -9,7 +9,6 @@ const Recebedor = sequelize.define(
   {
     nome: {
       type: DataTypes.STRING,
-      
     },
     cpf:{
       type:  DataTypes.STRING
@@ -23,7 +22,12 @@ const Recebedor = sequelize.define(
     chave_tipo: {
       type: DataTypes.ENUM,
       values: ["email", "telefone", "cpf", "aleatorio"],
-    }
+    },
+    status: {
+      type: Sequelize.ENUM,
+      values: ["validado", "rascunho"],
+      defaultValue: 'rascunho'
+  },
   },
   {
     freezeTableName: true,
