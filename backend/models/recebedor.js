@@ -21,7 +21,8 @@ const Recebedor = sequelize.define(
       type:  DataTypes.STRING
     },
     chave_tipo: {
-      type: DataTypes.ENUM(["email", "telefone", "cpf", "aleatorio"]),
+      type: DataTypes.ENUM,
+      values: ["email", "telefone", "cpf", "aleatorio"],
     }
   }
 );

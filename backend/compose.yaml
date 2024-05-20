@@ -2,23 +2,26 @@ services:
   server:
     build:
       context: .
-    container_name: backend-transfeera
+    container_name: back-transfeera
     environment:
       NODE_ENV: development
+    depends_on:
+      db: 
+        condition: service_started
     ports:
       - 3000:3000
 
   db:
     image: mysql
-    restart: always
-    container_name: database-transfeera
+    container_name: db-transfeera
     volumes:
       - db-data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=qwert9876
-      - MYSQL_DATABASE=pinkFlamingosDatabase
+      - MYSQL_DATABASE=transfeera
     ports:
       - 3307:3306
+
    
 volumes:
   db-data:
